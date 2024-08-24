@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(author, title, page, status) {
     this.author = author;
@@ -7,15 +7,17 @@ function Book(author, title, page, status) {
     this.status = status;
 }
 
-function inputBook(){
-
-}
-
 function addBookToLibrary(){
-
-  console.log("hello");
- 
+  const book1 = ["Julie", "Purple_Love", 10, true];
+  myLibrary.push(book1);
+  console.log(myLibrary);
 }
+
+addBookToLibrary();
+
+
+
+
 
 
 
