@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .add_logo{
@@ -29,6 +29,18 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.input_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box{
+    padding: 10px;
+    margin: 10px;
+}
+
 .add_button{
     display: flex;
     align-items: center;
