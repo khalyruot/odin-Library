@@ -8,12 +8,15 @@ function Book(author, title, page, status) {
 }
 
 function addBookToLibrary(){
-  const book1 = ["Julie", "Purple_Love", 10, true];
-  const book2 = ["Micheal", "Blue Sky", 50, false];
-  const book3 = ["Romeo", "Under Ocean", 70, true];
-  const book4 = ["Vanda", "Time is Now", 90, false];
-  myLibrary.push(book1);
-  myLibrary.push(book2);
+
+  const book = [{author: "Julie", title: "Purple_Love", page: 10, status: true},
+                {author: "Micheall", title: "Blue Sky", page: 50, status: false},
+                {author: "Romeo", title: "Under Ocean", page: 70, status: true},
+                {author: "Vanda", title: "Time is now", page: 90, status: false}]
+  
+  for(let i = 0; i < book.length; i++){
+    myLibrary.push(book);
+  }
   console.log(myLibrary);
 }
 
