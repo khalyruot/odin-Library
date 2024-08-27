@@ -14,10 +14,13 @@ function addBookToLibrary(){
                 {author: "Romeo", title: "Under Ocean", page: 70, status: true},
                 {author: "Vanda", title: "Time is now", page: 90, status: false}]
   
-  for(let i = 0; i < book.length; i++){
-    myLibrary.push(book);
-  }
-  console.log(myLibrary);
+ 
+
+  book.forEach(value=>{
+    myLibrary =  "Author: " + value.author + ", Title: " + value.title + ", Page:" + value.page + ", Status: " + value.status;
+    console.log(myLibrary);
+  });
+  
 }
 
 addBookToLibrary();
