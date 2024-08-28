@@ -1,5 +1,7 @@
 let myLibrary = [];
 
+
+
 function Book(author, title, page, status) {
     this.author = author;
     this.title = title;
@@ -8,22 +10,24 @@ function Book(author, title, page, status) {
 }
 
 function addBookToLibrary(){
+  const author_input = document.getElementById('input1');
+  const title_input = document.getElementById('input2');
+  const page_input = document.getElementById('input3');
+  const status_input = document.getElementById('input4');
 
-  const book = [{author: "Julie", title: "Purple_Love", page: 10, status: true},
-                {author: "Micheall", title: "Blue Sky", page: 50, status: false},
-                {author: "Romeo", title: "Under Ocean", page: 70, status: true},
-                {author: "Vanda", title: "Time is now", page: 90, status: false}]
+
+  const book = [{author: author_input.value, title: title_input.value, page: page_input.value, status: status_input.value}]
   
- 
+  
 
   book.forEach(value=>{
     myLibrary =  "Author: " + value.author + ", Title: " + value.title + ", Page:" + value.page + ", Status: " + value.status;
     console.log(myLibrary);
+    
   });
   
 }
 
-addBookToLibrary();
 
 
 
