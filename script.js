@@ -15,7 +15,11 @@ function addBookToLibrary(){
   const page_input = document.getElementById('input3');
   const status_input = document.getElementById('input4');
 
-
+  const display_output_author = document.querySelector('#display_author');
+  const display_output_title = document.querySelector('#display_title');
+  const display_output_page = document.querySelector('#display_page');
+  const display_output_status = document.querySelector('#display_status');
+  
   const book = [{author: author_input.value, title: title_input.value, page: page_input.value, status: status_input.value}]
   
   
@@ -23,6 +27,11 @@ function addBookToLibrary(){
   book.forEach(value=>{
     myLibrary =  "Author: " + value.author + ", Title: " + value.title + ", Page:" + value.page + ", Status: " + value.status;
     console.log(myLibrary);
+    console.log(title_input.value);
+    display_output_author.innerHTML = "The Author is: " + author_input.value;
+    display_output_title.innerHTML = "The Title is: " + title_input.value;
+    display_output_page.innerHTML = "The page number is: " + page_input.value;
+    display_output_status.innerHTML = "The Status is: " + status_input.value;
     
   });
   
