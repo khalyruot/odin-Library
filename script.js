@@ -22,10 +22,6 @@ function Book(author, title, page, status) {
 function addBookToLibrary(event){
 
   event.preventDefault();
-  
-
-  
-  
 
   displayBook();
   
@@ -38,11 +34,30 @@ function displayBook(){
     myLibrary =  "Author: " + value.author + ", Title: " + value.title + ", Page:" + value.page + ", Status: " + value.status;
     console.log(myLibrary);
     console.log(title_input.value);
-    display_output_author.innerHTML = author_input.value;
-    display_output_title.innerHTML = title_input.value;
-    display_output_page.innerHTML = page_input.value;
-    display_output_status.innerHTML = status_input.value;
-    
+
+    //display author
+    var x = document.createElement("tr");
+    var t = document.createTextNode(author_input.value);
+    x.appendChild(t);
+    document.getElementById("display_author").appendChild(x);
+
+    //display title
+    var x = document.createElement("tr");
+    var t = document.createTextNode(title_input.value);
+    x.appendChild(t);
+    document.getElementById("display_title").appendChild(x);
+
+    //display page
+    var x = document.createElement("tr");
+    var t = document.createTextNode(page_input.value);
+    x.appendChild(t);
+    document.getElementById("display_page").appendChild(x);
+
+    //display status
+    var x = document.createElement("tr");
+    var t = document.createTextNode(status_input.value);
+    x.appendChild(t);
+    document.getElementById("display_status").appendChild(x);
   });
 
 }
