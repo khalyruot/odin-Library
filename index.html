@@ -18,17 +18,24 @@
                 <input type="text" class="input-box" id="input4" placeholder="Enter true or false here..."><br>
             </div>
             <div class = "add_button">
-                <button onclick = "addBookToLibrary()" class="my-button" id="myButton">Add Book</button>
+                <button onclick = "addBookToLibrary(event)" class="my-button" id="myButton">Add Book</button>
             </div>
         </div>
     
-        <div class = "display_section">
-            <div id="display_author"></div>
-            <div id="display_title"></div>
-            <div id="display_page"></div>
-            <div id="display_status"></div>
-            
-        </div>
+        <table class = "display_section">
+            <tr>
+                <th>The Authors</th>
+                <th>The Title</th>
+                <th>The page number</th>
+                <th>The Status</th>
+            </tr>
+            <tr>
+                <td id="display_author"></td>
+                <td id="display_title"></td>
+                <td id="display_page"></td>
+                <td id="display_status"></td>
+            </tr>
+        </table>
 
     </div>
     
