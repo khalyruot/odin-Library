@@ -58,6 +58,22 @@ function displayBook(){
     var t = document.createTextNode(status_input.value);
     x.appendChild(t);
     document.getElementById("display_status").appendChild(x);
+
+    //display delete button
+    var x = document.createElement("Button");
+    var t = document.createTextNode("Delete");
+    x.appendChild(t);
+    document.getElementById("delete_button").appendChild(x).className = 'button_style';
+    console.log(book);
+
+    //when click delete button --> delete book
+    const deleteButton = document.getElementsByClassName("button_style")[0];
+    deleteButton.addEventListener("click", deletebuttonFunction);
+    function deletebuttonFunction() {
+      console.log("yes"); 
+      const author_remove = document.getElementsByClassName("display_data")[0];
+      author_remove.remove();
+    }
   });
 
 }

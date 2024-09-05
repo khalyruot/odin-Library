@@ -73,3 +73,19 @@ body {
 table, th, td {
     border:1px solid black;
   }
+
+.display_data{
+    border:1px solid black;
+}
+
+.delete_button{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.button_style{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
