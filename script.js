@@ -1,4 +1,14 @@
-let myLibrary = ["Author", "Title", "Page", "Status"];
+let myLibrary = [];
+
+  const author_input = document.getElementById('input1');
+  const title_input = document.getElementById('input2');
+  const page_input = document.getElementById('input3');
+  const status_input = document.getElementById('input4');
+
+  const display_output_author = document.querySelector('#display_author');
+  const display_output_title = document.querySelector('#display_title');
+  const display_output_page = document.querySelector('#display_page');
+  const display_output_status = document.querySelector('#display_status');
 
 
 
@@ -9,83 +19,34 @@ function Book(author, title, page, status) {
     this.status = status;
 }
 
+function addBookToLibrary(event){
 
-function createTable(){
+  event.preventDefault();
+  
 
+  
+  
 
-    //create dynamic table
-    var bookTable = document.createElement('table');
-    bookTable.setAttribute('id','bookTable');
+  displayBook();
+  
+}
 
-    var tr = bookTable.insertRow(-1);
+function displayBook(){
 
-    for (var h=0; h<myLibrary.length; h++){
-      var th = document.createElement('th');
-      th.innnerHTML = myLibrary[h];
-    }
-
-    var div = document.getElementById('cont');
-    div.appendChild(bookTable);
-
-    addRow();
+  const book = [{author: author_input.value, title: title_input.value, page: page_input.value, status: status_input.value}]
+  book.forEach(value=>{
+    myLibrary =  "Author: " + value.author + ", Title: " + value.title + ", Page:" + value.page + ", Status: " + value.status;
+    console.log(myLibrary);
+    console.log(title_input.value);
+    display_output_author.innerHTML = author_input.value;
+    display_output_title.innerHTML = title_input.value;
+    display_output_page.innerHTML = page_input.value;
+    display_output_status.innerHTML = status_input.value;
+    
+  });
 
 }
 
-function addRow(){
-  var bookTab = document.getElementById('bookTable');
-  console.log(bookTable);
-
-  var rowCnt = bookTab.rows.length;
-  var tr = bookTab.insertRow((rowCnt));
-  for(var c=0; c<myLibrary.length;  c++){
-    var td = document.createElement('td');
-    td = tr.insetCell(c);
-
-    if(c==0){
-      //add button
-      var button = document.createElement('input');
-
-      //set input attibute
-      button.setAttribute('type', 'button');
-      button.setAttribute('value', 'Remove');
-      button.setAttribute('id','rm');
-
-      //add the button's onnclick event
-      button.setAttribute('onclick', 'removeRow(this)');
-      td.appendChild(button);
-    }
-
-    else{
-      var ele = document.createElement('input');
-      ele.setAttribute('type','text');
-      ele.setAttribute('value','');
-
-      td.appendChild(ele);
-
-    }
-  }
-}
-
-function removeRow(oButton){
-  var bookTab = document.getElementById('bookTable');
-  bookTab.deleteRow(oButton.parentNode.parentNode.rowIndex);
-}
-
-function submit(){
-  var myTab = document.getElementById('bookTable');
-  var value = new Array();
-
-  //Loop through each row of the table
-  for (row = 1; row < myTab.row.length-1; row++){
-    for(c=0; c<myTab.row[row].cell.length; c++){
-      var element = myTab.rows.item(row.cell[c]);
-      if(elemet.childNotes[0].getAttribute('type')=='text'){
-        value.push(element.childNodes[0].value);
-      }
-    }
-  }
-  console.log('Data send:\n' + values);
-}
 
 
 

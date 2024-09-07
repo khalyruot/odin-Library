@@ -68,6 +68,7 @@ body {
     justify-content: center;
     border: 2px solid black;
     flex-direction: column;
+<<<<<<< HEAD
 }
 
 table, th, td {
@@ -88,4 +89,6 @@ table, th, td {
     font-weight: bold;
     display: flex;
     flex-direction: column;
+=======
+>>>>>>> parent of 2c43a76 (add table)
 }
