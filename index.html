@@ -6,40 +6,24 @@
     <title>Basic Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class = "container">
+<body onload ="createTable()">
+        <p>
+            <input 
+            type= "button"
+            id = "bt"
+            value = "Submit Data"
+            onclick="submit()"/>
+        </p>
+        
+        <div id="cont"></div>    
 
-        <div class = "add_section">
-            <div class = "add_logo">Welcome To Library</div>
-            <div class="input_box">
-                <input type="text" class="input-box" id="input1" placeholder="Enter author here..."><br>
-                <input type="text" class="input-box" id="input2" placeholder="Enter title here..."><br>
-                <input type="text" class="input-box" id="input3" placeholder="Enter page here..."><br>
-                <input type="text" class="input-box" id="input4" placeholder="Enter true or false here..."><br>
-            </div>
-            <div class = "add_button">
-                <button onclick = "addBookToLibrary(event)" class="my-button" id="myButton">Add Book</button>
-            </div>
-        </div>
-    
-        <table class = "display_section">
-            <tr>
-                <th>The Authors</th>
-                <th>The Title</th>
-                <th>The page number</th>
-                <th>The Status</th>
-                <th>Delete Button</th>
-            </tr>
-            <tr class = "display_data">
-                <td id="display_author"></td>
-                <td id="display_title"></td>
-                <td id="display_page"></td>
-                <td id="display_status"></td>
-                <td id="delete_button"></td>
-            </tr>
-        </table>
-
-    </div>
+        <p>
+            <input 
+            type="button"
+            id="addRow"
+            value="Add New Row"
+            onclick="addRow()"/>
+        </p>
     
 
     <script src="script.js"></script>
