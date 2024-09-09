@@ -6,24 +6,31 @@
     <title>Basic Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload ="createTable()">
-        <p>
-            <input 
-            type= "button"
-            id = "bt"
-            value = "Submit Data"
-            onclick="submit()"/>
-        </p>
-        
-        <div id="cont"></div>    
+<body onload ="createTable()" class="container">
+        <div>
+            <p>
+                <input 
+                type="button"
+                id="addRow"
+                value="Add New Boooks"
+                onclick="addRow()"/>
+            </p>
+        </div>
 
-        <p>
-            <input 
-            type="button"
-            id="addRow"
-            value="Add New Row"
-            onclick="addRow()"/>
-        </p>
+        <div id="cont" class="cell_part"></div> 
+
+        <div class = button_part>
+            <p>
+                <input 
+                type= "button"
+                id = "bt"
+                value = "Submit Data"
+                onclick="submit()"/>
+            </p>
+            
+        </div>
+           
+       
     
 
     <script src="script.js"></script>

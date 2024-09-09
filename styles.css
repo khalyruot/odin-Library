@@ -9,83 +9,36 @@ body {
 }
 
 .container{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 100vh;
-    width: 100%;
-}
-
-.add_section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-.add_logo{
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.input_box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.input-box{
-    padding: 10px;
-    margin: 10px;
-}
-
-.add_button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.my-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.my-button:hover {
-    background-color: #0056b3;
-}
-
-.display_section{
-    background-color: bisque;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
+    display:flex;
     flex-direction: column;
+    justify-content: space space-between;
 }
 
-table, th, td {
-    border:1px solid black;
-  }
-
-.display_data{
-    border:1px solid black;
+.cell_part{
+    text-align: center;
 }
 
-.delete_button{
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
+.button_part{
+
+    text-align: center;
 }
 
-.button_style{
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
+#bt{
+    height: 30px;
+    width: 150px;;
+}
+
+#addRow{
+    height: 30px;
+    width: 150px;
+}
+
+#rm{
+    height: 30px;
+    width: 150px;
+}
+
+#cell_td{
+    height: 30px;
+    width: 300px;
 }

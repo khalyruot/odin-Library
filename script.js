@@ -33,13 +33,13 @@ function createTable(){
 
 function addRow(){
   var bookTab = document.getElementById('bookTable');
-  console.log(bookTable);
+  
 
   var rowCnt = bookTab.rows.length;
   var tr = bookTab.insertRow((rowCnt));
   for(var c=0; c<myLibrary.length;  c++){
     var td = document.createElement('td');
-    td = tr.insetCell(c);
+    td = tr.insertCell(c);
 
     if(c==0){
       //add button
@@ -59,6 +59,7 @@ function addRow(){
       var ele = document.createElement('input');
       ele.setAttribute('type','text');
       ele.setAttribute('value','');
+      ele.setAttribute('id','cell_td');
 
       td.appendChild(ele);
 
@@ -73,14 +74,14 @@ function removeRow(oButton){
 
 function submit(){
   var myTab = document.getElementById('bookTable');
-  var value = new Array();
+  var values = new Array();
 
   //Loop through each row of the table
-  for (row = 1; row < myTab.row.length-1; row++){
-    for(c=0; c<myTab.row[row].cell.length; c++){
-      var element = myTab.rows.item(row.cell[c]);
-      if(elemet.childNotes[0].getAttribute('type')=='text'){
-        value.push(element.childNodes[0].value);
+  for (row = 1; row < myTab.rows.length-1; row++){
+    for(c=0; c<myTab.rows[row].cells.length; c++){
+      var element = myTab.rows.item(row.cells[c]);
+      if(element.childNotes[0].getAttribute('type')=='text'){
+        values.push(element.childNodes[0].value);
       }
     }
   }
