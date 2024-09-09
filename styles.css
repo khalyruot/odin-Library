@@ -16,6 +16,8 @@ body {
 
 .cell_part{
     text-align: center;
+    border: black 1px;
+    background-color: aquamarine;
 }
 
 .button_part{
@@ -41,4 +43,10 @@ body {
 #cell_td{
     height: 30px;
     width: 300px;
+}
+
+th,td{
+    height: 30px;
+    width: 300px;
+    border: black solid 1px;
 }

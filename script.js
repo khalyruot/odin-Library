@@ -1,4 +1,4 @@
-let myLibrary = ["Author", "Title", "Page", "Status"];
+let myLibrary = ["Remove","Author", "Title", "Page", "Status"];
 
 
 
@@ -19,15 +19,16 @@ function createTable(){
 
     var tr = bookTable.insertRow(-1);
 
+    console.log(myLibrary.length)
+
     for (var h=0; h<myLibrary.length; h++){
       var th = document.createElement('th');
-      th.innnerHTML = myLibrary[h];
+      th.innerHTML = myLibrary[h];
+      tr.appendChild(th);
     }
 
     var div = document.getElementById('cont');
     div.appendChild(bookTable);
-
-    addRow();
 
 }
 
