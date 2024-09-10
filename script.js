@@ -73,7 +73,21 @@ function removeRow(oButton){
   bookTab.deleteRow(oButton.parentNode.parentNode.rowIndex);
 }
 
+function submit(){
+  var myTab = document.getElementById('bookTable');
+  var values = new Array();
 
+  //Loop through each row of the table
+  for (row = 1; row < myTab.rows.length-1; row++){
+    for(c=0; c<myTab.rows[row].cells.length; c++){
+      var element = myTab.rows.item(row.cells[c]);
+      if(element.childNotes[0].getAttribute('type')=='text'){
+        values.push(element.childNodes[0].value);
+      }
+    }
+  }
+  console.log('Data send:\n' + values);
+}
 
 
 
