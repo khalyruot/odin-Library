@@ -86,7 +86,7 @@ function submit(){
       }
     }
   }
-  console.log('Data send:\n' + values);
+  console.log(values);
 }
 
 
