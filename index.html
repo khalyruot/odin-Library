@@ -6,31 +6,6 @@
     <title>Basic Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<<<<<<< HEAD
-<body onload ="createTable()" class="container">
-        <div>
-            <p>
-                <input 
-                type="button"
-                id="addRow"
-                value="Add New Boooks"
-                onclick="addRow()"/>
-            </p>
-        </div>
-
-        <div id="cont" class="cell_part"></div> 
-
-        <div>
-            <p>
-                <input 
-                  type="button" 
-                  id="bt" 
-                  value="Sumbit Data" 
-                  onclick="submit()" />
-            </p>
-        </div>
-
-=======
 <body>
     <div class = "container">
 
@@ -47,13 +22,13 @@
             </div>
         </div>
     
-        <table class = "display_section">
+        <table id = "display_section">
             <tr>
+                <th>Delete Button</th>
                 <th>The Authors</th>
                 <th>The Title</th>
                 <th>The page number</th>
                 <th>The Status</th>
-                <th>Delete Button</th>
             </tr>
             <tr class = "display_data">
                 <td id="display_author"></td>
@@ -66,7 +41,6 @@
 
     </div>
     
->>>>>>> parent of c481693 (update)
 
     <script src="script.js"></script>
 </body>
