@@ -10,33 +10,23 @@
     <div class = "container">
 
         <div class = "add_section">
-            <div class = "add_logo">Welcome To Library</div>
-            <div class="input_box">
-                <input type="text" class="input-box" id="input1" placeholder="Enter author here..."><br>
-                <input type="text" class="input-box" id="input2" placeholder="Enter title here..."><br>
-                <input type="text" class="input-box" id="input3" placeholder="Enter page here..."><br>
-                <input type="text" class="input-box" id="input4" placeholder="Enter true or false here..."><br>
+            <div class = "top_part">
+                <div class = "add_logo">Welcome To Library</div>
+                <div class="input_box">
+                    <input type="text" class="input-box" id="input1" placeholder="Enter author here..."><br>
+                    <input type="text" class="input-box" id="input2" placeholder="Enter title here..."><br>
+                    <input type="text" class="input-box" id="input3" placeholder="Enter page here..."><br>
+                    <input type="text" class="input-box" id="input4" placeholder="Enter Yes or No here..."><br>
+                </div>
             </div>
+           
             <div class = "add_button">
                 <button onclick = "addBookToLibrary(event)" class="my-button" id="myButton">Add Book</button>
             </div>
         </div>
     
         <table id = "display_section">
-            <tr>
-                <th>Delete Button</th>
-                <th>The Authors</th>
-                <th>The Title</th>
-                <th>The page number</th>
-                <th>The Status</th>
-            </tr>
-            <tr class = "display_data">
-                <td id="display_author"></td>
-                <td id="display_title"></td>
-                <td id="display_page"></td>
-                <td id="display_status"></td>
-                <td id="delete_button"></td>
-            </tr>
+            
         </table>
 
     </div>

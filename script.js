@@ -31,15 +31,6 @@ function displayBook(){
 
   const book = new Book(author_input.value, title_input.value, page_input.value, status_input.value);
 
-  
-
-    let eachBooks = Object.keys(book);
-    eachBooks.forEach((eachBook) => console.log(eachBook));
-
-    
-
-    
-    console.log(book);
 
     // Add Row
     var bookTable = document.getElementById('display_section');
@@ -70,7 +61,9 @@ function displayBook(){
       }
       else {
           // CREATE AND ADD TEXTBOX IN EACH CELL.
-        
+          let eachBooks = Object.keys(book);
+          eachBooks.forEach((eachBook) => console.log(eachBook));
+
           eachBooks.forEach((eachBook) => {
             console.log(`${eachBook} is ${book[eachBook]} `);
             const b = book[eachBook];
@@ -81,6 +74,7 @@ function displayBook(){
             ele.appendChild(t);
             ele.setAttribute('type', "The " + eachBook);
             ele.setAttribute('value', book[eachBook]);
+            ele.setAttribute('id', 'each_book')
             td.appendChild(ele);
           })
           

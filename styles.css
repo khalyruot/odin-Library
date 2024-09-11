@@ -3,52 +3,63 @@ body {
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-.container{
-    display:flex;
+.top_part{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.add_logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex start;
+    margin-top: 10px;
+}
+
+.input_box{
+    display: flex;
+    justify-content: center;
+    align-items: flex start;
+    
+}
+
+.input-box{
+    width: 200px;
+    height: 30px;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.add_button{
+    display: flex;
+    justify-content: center;
+    align-items: flex start;
+    
+}
+
+.my-button{
+    height: 30px;
+    width: 100px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.display_section{
+    display: flex;
     flex-direction: column;
-    justify-content: space space-between;
 }
 
-.cell_part{
-    text-align: center;
-    border: black 1px;
-    background-color: aquamarine;
-}
-
-.button_part{
-
-    text-align: center;
-}
-
-#bt{
+#each_book{
+    border: 1px solid black;
+    width: 200px;
     height: 30px;
-    width: 150px;;
-}
-
-#addRow{
-    height: 30px;
-    width: 150px;
 }
 
 #rm{
+    width: 80px;
     height: 30px;
-    width: 150px;
-}
-
-#cell_td{
-    height: 30px;
-    width: 300px;
-}
-
-th,td{
-    height: 30px;
-    width: 300px;
-    border: black solid 1px;
 }
 
 
