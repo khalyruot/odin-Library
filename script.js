@@ -40,7 +40,7 @@ function displayBook(){
 
     console.log(book);
 
-    for (var c = 0; c < 2; c++) {
+    for (var c = 0; c < 3; c++) {
       var td = document.createElement('td');          // TABLE DEFINITION.
       td = tr.insertCell(c);
 
@@ -59,16 +59,20 @@ function displayBook(){
 
           td.appendChild(button);
       }
+
+      else if(c==2){
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "checkbox");
+        x.setAttribute('id', 'checkBox');
+        td.appendChild(x);
+      }
+
       else {
           // CREATE AND ADD TEXTBOX IN EACH CELL.
           let eachBooks = Object.keys(book);
-          eachBooks.forEach((eachBook) => console.log(eachBook));
 
           eachBooks.forEach((eachBook) => {
-            console.log(`${eachBook} is ${book[eachBook]} `);
             const b = book[eachBook];
-            
-
             var ele = document.createElement("TD");
             var t = document.createTextNode("The " + eachBook + " is: " + book[eachBook]);
             ele.appendChild(t);
@@ -80,9 +84,6 @@ function displayBook(){
           
       }
     }
-  
-  
-
 
 }
 
@@ -90,6 +91,8 @@ function removeRow(oButton) {
   var bookTable = document.getElementById('display_section');
   bookTable.deleteRow(oButton.parentNode.parentNode.rowIndex);       // BUTTON -> TD -> TR.
 }
+
+
 
 
 
