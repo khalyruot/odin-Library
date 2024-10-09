@@ -62,8 +62,11 @@ function displayBook(){
 
       else if(c==2){
         var x = document.createElement("INPUT");
+        const status_text = document.createElement("p");
+        status_text.innerText = "STATUS";
         x.setAttribute("type", "checkbox");
         x.setAttribute('id', 'checkBox');
+        td.appendChild(status_text);
         td.appendChild(x);
       }
 
